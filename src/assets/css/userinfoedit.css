@@ -1,0 +1,106 @@
+.userinfoedit-page {
+  min-height: 152.2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfoedit-page .signup-form,
+.userinfoedit-page form {
+  width: 90%;
+  max-width: 600px;
+  margin: 24px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.userinfoedit-page .navbar {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 40px;
+}
+.userinfoedit-page .navbar-left { display: flex; align-items: center; }
+.userinfoedit-page .navbar-logo { width: 30px; height: 30px; margin-right: 10px; }
+.userinfoedit-page .navbar-title { font-size: 20px; font-weight: bold; }
+.userinfoedit-page .navbar-right { display: flex; gap: 38px; }
+.userinfoedit-page .navbar-right a {
+  text-decoration: none;
+  color: #B5B5B5;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: none;
+}
+.userinfoedit-page .navbar-right a.active {
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+}
+
+.userinfoedit-page .signup-wrapper {
+  flex-grow: 1;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form .form-title {
+  font-size: 25px;   
+  font-weight: bold;
+  text-align: left;   
+  margin: 30px 0;  
+  margin-bottom: 10px;
+}
+
+.userinfoedit-page .result-box {
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.userinfoedit-page .signup-wrapper > .withdrawn-box {
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.userinfoedit-page .withdrawn-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+
+.userinfoedit-page .withdrawn-desc {
+  color: #000;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.userinfoedit-page .withdrawn-btn {
+  padding: 12px 50px;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.userinfoedit-page .page-footer.normal-footer {
+  background-color: #eee;
+  height: 100px;
+  width: 100%;
+  position: static;
+  margin-top: auto;
+}

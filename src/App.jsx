@@ -1,8 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Login from './pages/auth/Login';
 import FindId from './pages/auth/FindId';
-import MeetingMinuteList from './pages/mom/MeetingMinuteList';
+import FindPw from './pages/auth/FindPw';
+import Signup from "./pages/auth/Signup";
+import UserInfoPwCheck from './pages/mypage/userinfo/UserInfoPwCheck';
+import UserInfoEdit from './pages/mypage/userinfo/UserInfoEdit';
+import InquiryMain from './pages/mypage/Inquiry/InquiryMain';
+import MeetingMinuteList from './pages/team/MeetingMinuteList';
+import WhenToMeetList from "./pages/team/WhenToMeetList";
 import './App.css';
 
 function App() {
@@ -12,8 +18,21 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/find-id" element={<FindId />} />
+          <Route path="/findid" element={<FindId />} />
+          <Route path="/findpw" element={<FindPw />} />
+          <Route path="/signup" element={<Signup />} />
+
+          <Route path="/mypage/userInfo/pwCheck" element={<UserInfoPwCheck />} />
+          <Route path="/mypage/userInfo/edit" element={<UserInfoEdit />} />
+          <Route path="/mypage/Inquiry" element={<InquiryMain />} />
+
           <Route path="/meeting-minutes" element={<MeetingMinuteList />} />
+          <Route path="/team" element={<Navigate to="/team/meeting" replace />} />
+          <Route path="/team/meeting" element={<MeetingMinuteList />} />
+          <Route path="/team/wentomeet" element={<WhenToMeetList />} />
+
+          {/* <Route path="/team/members" element={<MemberManagementPage />} />
+          <Route path="/team/settings" element={<TeamSettingsPage />} /> */}
         </Routes>
       </div>
     </Router>
